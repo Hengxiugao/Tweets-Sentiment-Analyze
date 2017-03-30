@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= "Sentiment Analysis Baseline System| NLP project"
+  form(action='/base', method='get')
+    input(placeholder='Sentence here', name='sentence')
+    input(value='Analyze', type='submit')
+  form(action='/base', method='get')
+    input(placeholder='', name='test_parameter')
+    input(value='Test', type='submit')
+    input(value='test_hidden', type='hidden' name='test_hidden')
+  h2= "Sentiment:" 
+  p="Sentence: "+sentence
+  p="Sentiment: "+score
+  a(href='/') index
+

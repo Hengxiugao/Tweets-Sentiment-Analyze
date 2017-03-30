@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1= "Sentiment Analysis Final System| NLP project"
+  form(action='/final', method='get')
+    input(placeholder='', name='collect_parameter')
+    input(value='Collect', type='submit')
+    input(value='collect_hidden', type='hidden' name='collect_hidden')
+  form(action='/final', method='get')
+    input(placeholder='', name='train_parameter')
+    input(value='Train', type='submit')
+    input(value='train_hidden', type='hidden' name='train_hidden')
+  form(action='/final', method='get')
+    input(placeholder='', name='class_sentence')
+    input(value='Classifiy', type='submit')
+    input(value='class_hidden', type='hidden' name='class_hidden')
+  form(action='/final', method='get')
+    input(placeholder='', name='test_parameter')
+    input(value='Test', type='submit')
+    input(value='test_hidden', type='hidden' name='test_hidden')
+
+  h2= "Sentiment:" 
+  p="Sentence: "+sentence
+  p="Sentiment: "+class_label
+  a(href='/') index
